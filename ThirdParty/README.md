@@ -17,10 +17,10 @@ Highlighted **folders** contain custom-made vendor code (can be edited) while th
 
 ## Notes
 
-The object-tracking algorithm exists in its final form in [scripts/ssd_final.py](ThirdParty/scripts/ssd_final.py) which is the file linked to the Unreal Project.
-Files like [webcam.py](ThirdParty/scripts/webcam.py) and [ssd.py](ThirdParty/scripts/ssd.py) were used for testing and the rest are for training the model from scratch.
+The object-tracking algorithm exists in its final form in [scripts/ssd_final.py](scripts/ssd_final.py) which is the file linked to the Unreal Project.
+Files like [webcam.py](scripts/webcam.py) and [ssd.py](scripts/ssd.py) were used for testing and the rest are for training the model from scratch.
 
 ## References
-- The object detection implementation in [scripts](ThirdParty/scripts) is based on the [Single Shot Multibox Detector](https://link.springer.com/chapter/10.1007/978-3-319-46448-0_2).
+- The object detection implementation in [scripts](scripts) is based on the [Single Shot Multibox Detector](https://link.springer.com/chapter/10.1007/978-3-319-46448-0_2).
 
-- The object tracking implementation in [scripts/deep_sort](ThirdParty/scripts/deep_sort) is based on the [DeepSort](https://github.com/nwojke/deep_sort.git) algorithm and repo.
+- The object tracking implementation in [scripts/deep_sort](scripts/deep_sort) is based on the [DeepSort](https://github.com/nwojke/deep_sort.git) algorithm and repo.
