@@ -1,0 +1,67 @@
+{
+    "model": {
+        "name": "ssd300",
+        "input_height": 300,
+        "input_width" : 300,
+        "l2_regularization": 0.0005,
+        "kernel_initializer": "he_normal",
+        "default_boxes": {
+            "variances": [
+                0.1,
+                0.1,
+                0.2,
+                0.2
+            ],
+            "scales": [0.1, 0.2, 0.37, 0.54, 0.71, 0.88, 1.05],
+            "aspect_ratios":[[1.0, 2.0, 0.5],
+                            [1.0, 2.0, 0.5, 3.0, 0.33333],
+                            [1.0, 2.0, 0.5, 3.0, 0.33333],
+                            [1.0, 2.0, 0.5, 3.0, 0.33333],
+                            [1.0, 2.0, 0.5],
+                            [1.0, 2.0, 0.5]],
+            "layers": [
+                {
+                    "name": "conv4_3_norm",
+                    "size": 38
+                },
+                {
+                    "name": "fc7",
+                    "size": 19
+                },
+                {
+                    "name": "conv6_2",
+                    "size": 10
+                },
+                {
+                    "name": "conv7_2",
+                    "size": 5
+                },
+                {
+                    "name": "conv8_2",
+                    "size": 3
+                },
+                {
+                    "name": "conv9_2",
+                    "size": 1,
+                    "offset": [
+                        0.5,
+                        0.5
+                    ]
+                }
+            ]
+        }
+    },
+    "training": {
+        "match_threshold": 0.5,
+        "neutral_threshold": 0.3,
+        "min_negative_boxes": 0,
+        "negative_boxes_ratio": 3,
+        "alpha": 1
+    },
+    "classes":  ["background",
+           "aeroplane", "bicycle", "bird", "boat",
+           "bottle", "bus", "car", "cat",
+           "chair", "cow", "diningtable", "dog",
+           "horse", "motorbike", "person", "pottedplant",
+           "sheep", "sofa", "train", "tvmonitor"]
+}

@@ -1,0 +1,41 @@
+{
+    "model": {
+        "name": "ssd7",
+        "input_height": 300,
+        "input_width" : 480,
+        "l2_regularization": 0.0005,
+        "kernel_initializer": "he_normal",
+        "default_boxes": {
+            "scales": [
+                0.1,
+                0.3,
+                0.5,
+                0.7,
+                0.9
+            ],
+            "aspect_ratios": [
+                [0.33, 0.5, 1.0, 2.0, 3.0],
+                [0.33, 0.5, 1.0, 2.0, 3.0],
+                [0.33, 0.5, 1.0, 2.0, 3.0],
+                [0.5, 1.0, 2.0]
+            ],
+            "variances": [
+                0.1,
+                0.1,
+                0.2,
+                0.2
+            ]
+        }
+    },
+    "training": {
+        "match_threshold": 0.5,
+        "neutral_threshold": 0.3,
+        "min_negative_boxes": 0,
+        "negative_boxes_ratio": 3,
+        "alpha": 1
+    },
+    "classes": [
+        "background",
+        "person"
+    ]
+}
